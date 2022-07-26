@@ -1,0 +1,22 @@
+<p>devolucao-emprestimo works!</p>
+<form [formGroup]="formEmprestimo" (ngSubmit)="onSubmit()">
+
+
+    <div class="form-group">
+        <label for="nome">ISBN</label>
+        <input type="number" class="form-control" name="isbn" id="isbn" formControlName="isbn">
+    </div>
+
+    <div class="form-group">
+        <label for="nome">Numero de Exemplar</label>
+        <input type="number" class="form-control" name="nro_exemplar" id="nro_exemplar" formControlName="nro_exemplar">
+    </div>
+
+    <div class="form-group">
+        <label for="nome">Codigo do Associado</label>
+        <input type="number" class="form-control" name="codigo_assoc" id="codigo_assoc" formControlName="codigo_assoc">
+    </div>
+
+    <input type="submit" class="btn btn-primary mt-4" value="Enviar">
+
+</form>

@@ -1,0 +1,21 @@
+<form [formGroup]="formExemplar" (ngSubmit)="onSubmit()">
+
+
+  <div class="form-group">
+    <label for="nome">Numero</label>
+    <input type="number" class="form-control" name="numero" id="numero" formControlName="numero">
+  </div>
+
+  <div class="form-group">
+    <label for="nome">ISBN</label>
+    <input type="text" class="form-control" name="isbn" id="isbn" formControlName="isbn">
+  </div>
+
+  <div class="form-group">
+    <label for="nome">Preço</label>
+    <input type="number" step=0.01 class="form-control" name="preco" id="preco" formControlName="preco">
+  </div>
+
+  <input type="submit" class="btn btn-primary mt-4" value="Enviar">
+
+</form>

@@ -1,0 +1,24 @@
+<form [formGroup]="formReserva" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="nome">ISBN</label>
+    <input type="number" class="form-control" name="isbn" id="isbn" formControlName="isbn">
+  </div>
+
+  <div class="form-group">
+    <label for="nome">Codigo do Associado</label>
+    <input type="number" class="form-control" name="codigo_assoc" id="codigo_assoc" formControlName="codigo_assoc">
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="tipo">Status</label>
+    <select class="form-control" name="status" id="status" formControlName="status">
+      <option value="1">Iniciado</option>
+      <option value="2">Avisado</option>
+      <option value="3">Anulado</option>
+    </select>
+  </div> -->
+
+  <input type="submit" class="btn btn-primary mt-4" value="Enviar">
+
+</form>

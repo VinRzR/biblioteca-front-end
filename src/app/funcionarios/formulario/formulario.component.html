@@ -1,0 +1,28 @@
+<form [formGroup]="formFuncionario" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" name="nome" id="nome" formControlName="nome">
+  </div>
+
+  <div class="form-group">
+    <label for="tipo">Função</label>
+    <select class="form-control" name="funcao" id="funcao" formControlName="funcao">
+      <option value="gerente">Gerente</option>
+      <option value="funcionario">Funcionario</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="nome">E-mail</label>
+    <input type="text" class="form-control" name="email" id="email" formControlName="email">
+  </div>
+
+  <div class="form-group">
+    <label for="nome">senha</label>
+    <input type="text" class="form-control" name="senha" id="senha" formControlName="senha">
+  </div>
+
+  <input type="submit" class="btn btn-primary mt-4" value="Enviar">
+
+</form>
