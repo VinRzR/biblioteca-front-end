@@ -32,10 +32,13 @@ export class ConsultarPublicacaoComponent implements OnInit {
           this.formPublicacao.get('isbn').value
         }`
       )
-      .subscribe((data) => {
-        console.log(data);
-        this.exemplares = data;
-      });
+      .subscribe(
+        (data) => {
+          console.log(data);
+          this.exemplares = data;
+        },
+        (error) => alert('ocorreu um erro, tente novamente!')
+      );
     // aqui você pode implementar a logica para fazer seu formulário salvar
     console.log(this.formPublicacao.value);
     // Usar o método reset para limpar os controles na tela

@@ -19,10 +19,13 @@ export class RelatorioAtrasadosComponent implements OnInit {
       .get<any>(
         'https://biblioteca-back-end.herokuapp.com/emprestimos/atrasados'
       )
-      .subscribe((data) => {
-        console.log(data);
-        this.atrasados = data;
-      });
+      .subscribe(
+        (data) => {
+          console.log(data);
+          this.atrasados = data;
+        },
+        (error) => alert('ocorreu um erro, tente novamente!')
+      );
   }
   // createForm(emprestimo: Emprestimo) {
   //   this.formEmprestimo = this.formBuilder.group({

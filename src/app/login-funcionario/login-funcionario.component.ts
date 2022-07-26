@@ -40,10 +40,13 @@ export class LoginFuncionarioComponent {
           senha: this.form.get('senha').value,
         }
       )
-      .subscribe((data) => {
-        this.mensagem = JSON.stringify(data);
-        this.router.navigate(['homeadm']);
-      });
+      .subscribe(
+        (data) => {
+          this.mensagem = JSON.stringify(data);
+          this.router.navigate(['homeadm']);
+        },
+        (error) => alert('ocorreu um erro, tente novamente!')
+      );
 
     // if (this.form.get('email').value == this.emailDB && this.form.get('senha').value == this.senhaDB)
     // {

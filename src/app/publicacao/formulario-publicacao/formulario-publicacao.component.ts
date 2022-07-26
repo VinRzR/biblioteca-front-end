@@ -34,10 +34,13 @@ export class FormularioPublicacaoComponent implements OnInit {
         'https://biblioteca-back-end.herokuapp.com/publicacaos',
         this.formPublicacao.value
       )
-      .subscribe((data) => {
-        console.log(data);
-        alert('publicação cadastrada');
-      });
+      .subscribe(
+        (data) => {
+          console.log(data);
+          alert('publicação cadastrada');
+        },
+        (error) => alert('ocorreu um erro, tente novamente!')
+      );
     // aqui você pode implementar a logica para fazer seu formulário salvar
     console.log(this.formPublicacao.value);
     // Usar o método reset para limpar os controles na tela

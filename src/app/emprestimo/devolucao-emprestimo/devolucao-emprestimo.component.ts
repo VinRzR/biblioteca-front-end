@@ -32,9 +32,12 @@ export class DevolucaoEmprestimoComponent implements OnInit {
         'https://biblioteca-back-end.herokuapp.com/emprestimos/devolver',
         this.formEmprestimo.value
       )
-      .subscribe((data) => {
-        console.log(data);
-      });
+      .subscribe(
+        (data) => {
+          console.log(data);
+        },
+        (error) => alert('ocorreu um erro, tente novamente!')
+      );
     // aqui você pode implementar a logica para fazer seu formulário salvar
     console.log(this.formEmprestimo.value);
     // Usar o método reset para limpar os controles na tela

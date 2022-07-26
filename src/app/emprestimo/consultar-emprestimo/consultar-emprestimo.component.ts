@@ -33,10 +33,13 @@ export class ConsultarEmprestimoComponent implements OnInit {
           this.formEmprestimo.get('codigo_assoc').value
         }`
       )
-      .subscribe((data) => {
-        console.log(data);
-        this.emprestimos = data;
-      });
+      .subscribe(
+        (data) => {
+          console.log(data);
+          this.emprestimos = data;
+        },
+        (error) => alert('ocorreu um erro, tente novamente!')
+      );
     // aqui você pode implementar a logica para fazer seu formulário salvar
     console.log(this.formEmprestimo.value);
     // Usar o método reset para limpar os controles na tela
