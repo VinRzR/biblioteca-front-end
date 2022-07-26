@@ -1,15 +1,14 @@
-//Install express server
 const express = require("express");
 const path = require("path");
 
+const PORT = process.env.PORT || 4200;
 const app = express();
 
-// Serve only the static files form the dist directory
-app.use(express.static("./dist/angular-app-heroku"));
+app.use(express.static(__dirname + "/dist/trab-final-baldochi"));
+app.get("/*", function (req, res) {
+  res.sendFile(__dirname + "/dist/trab-final-baldochi/index.html");
+});
 
-app.get("/*", (req, res) =>
-  res.sendFile("index.html", { root: "dist/angular-app-heroku/" })
-);
-
-// Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 8080);
+app.listen(PORT, () => {
+  console.log("Servidor inciado na porta" + PORT);
+});

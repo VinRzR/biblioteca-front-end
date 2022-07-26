@@ -1,0 +1,1 @@
+{"ast":null,"code":"var status = /*#__PURE__*/(() => {\n  (function (status) {\n    status[status[\"iniciado\"] = 0] = \"iniciado\";\n    status[status[\"avisado\"] = 1] = \"avisado\";\n    status[status[\"anulado\"] = 2] = \"anulado\";\n  })(status || (status = {}));\n\n  return status;\n})();\nexport class Reserva {}","map":null,"metadata":{},"sourceType":"module"}

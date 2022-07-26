@@ -1,0 +1,1 @@
+{"ast":null,"code":"var cargo = /*#__PURE__*/(() => {\n  (function (cargo) {\n    cargo[cargo[\"gerente\"] = 0] = \"gerente\";\n    cargo[cargo[\"funcionario\"] = 1] = \"funcionario\";\n  })(cargo || (cargo = {}));\n\n  return cargo;\n})();\nexport class Funcionarios {}","map":null,"metadata":{},"sourceType":"module"}
